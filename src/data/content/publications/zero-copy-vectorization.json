@@ -1,0 +1,19 @@
+{
+  "id": "zero-copy-vectorization-web-graphics",
+  "title": "Zero-Copy Vectorization Pipelines in WebAssembly",
+  "slug": "zero-copy-vectorization-web-graphics",
+  "publishDate": "2026-02-18",
+  "category": "SaaS Development",
+  "summary": "Exploring shared memory buffers and SIMD vector instructions inside browser runtimes for instantaneous SVG path decimation and raster processing.",
+  "image": "",
+  "referenceUrl": "https://github.com/CaretCoders/CaretCoders-Website",
+  "readTime": "5 min read",
+  "tags": ["WebAssembly", "SIMD", "SVG", "Performance"],
+  "featured": false,
+  "author": {
+    "name": "DetailMint Engineering",
+    "role": "Graphics Pipeline Group",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256"
+  },
+  "content": "### Introduction\n\nVector graphics decimation and Bezier curve smoothing typically require heavy round-trips to backend GPU clusters or sluggish JavaScript DOM traversals that drop frame rates on complex architectural blueprints.\n\n### Shared Memory Architecture in WebAssembly\n\nDetailMint leverages direct WebAssembly linear memory allocation to operate directly on raw vertex buffers without serialization penalties:\n\n1. **Zero-Copy Memory Transfer**: Direct pointer arithmetic over typed array views.\n2. **SIMD-Accelerated Curve Smoothing**: 128-bit vector registers evaluate cubic Bezier inflection points in parallel across 4 points per cycle.\n3. **Memory Footprint**: Sub-10MB peak memory footprint even when processing 500k-vertex technical schematics.\n\n### Production Outcomes\n\nThis architecture powers our browser-based design tools, delivering instantaneous 60fps previews on low-power mobile devices."
+}

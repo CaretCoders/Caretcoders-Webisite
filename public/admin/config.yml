@@ -1,0 +1,95 @@
+backend:
+  name: github
+  repo: CaretCoders/CaretCoders-Website
+  branch: main
+  base_url: https://auth.caretcoders.com
+  auth_endpoint: auth
+
+# Media Storage
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Display & UI Settings
+site_url: "https://caretcoders.com"
+display_url: "https://caretcoders.com"
+logo_url: "/caretcoders_logo.svg"
+
+collections:
+  # 1. Served Clients Strip on Homepage
+  - name: "clients"
+    label: "Served Clients"
+    label_singular: "Client"
+    folder: "src/data/content/clients"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{name}} — {{category}}"
+    fields:
+      - { label: "Client / Organization Name", name: "name", widget: "string" }
+      - { label: "Client Logo", name: "logo", widget: "image", required: false, choose_url: true }
+      - { label: "Service Category", name: "category", widget: "select", options: ["Enterprise Systems", "IoT & Telemetry", "Developer Tooling", "Cloud Architecture", "Applied AI", "Agricultural Infrastructure"] }
+      - { label: "Service Provided Summary (Under 50 words)", name: "description", widget: "text", hint: "Keep strictly under 50 words describing the delivered engineering or architecture value." }
+      - { label: "Client Website URL", name: "websiteUrl", widget: "string", required: false }
+      - { label: "Featured on Homepage", name: "featured", widget: "boolean", default: true }
+
+  # 2. Research & System Publications
+  - name: "publications"
+    label: "Research & System Papers"
+    label_singular: "Publication"
+    folder: "src/data/content/publications"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title}} ({{publishDate}})"
+    fields:
+      - { label: "Paper Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Publish Date", name: "publishDate", widget: "date", format: "YYYY-MM-DD" }
+      - { label: "Category", name: "category", widget: "select", options: ["Software Engineering", "SaaS Development", "Mobile Development", "AI & Automation", "Startup Insights", "Distributed Systems", "IoT Architecture"] }
+      - { label: "Abstract / Executive Summary", name: "summary", widget: "text" }
+      - { label: "Diagram / Banner Image", name: "image", widget: "image", required: false, choose_url: true }
+      - { label: "Reference / Citation Link", name: "referenceUrl", widget: "string", required: false, hint: "Link to published paper, RFC, IEEE, arXiv, or external repository." }
+      - { label: "Estimated Read Time", name: "readTime", widget: "string", default: "6 min read" }
+      - { label: "Tags (Comma-separated)", name: "tags", widget: "list", default: ["Architecture", "Engineering"] }
+      - { label: "Featured Article", name: "featured", widget: "boolean", default: false }
+      - { label: "Full Content (Markdown)", name: "content", widget: "markdown" }
+
+  # 3. Careers & Job Vacancies
+  - name: "careers"
+    label: "Careers & Vacancies"
+    label_singular: "Job Vacancy"
+    folder: "src/data/content/careers"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{slug}}"
+    summary: "{{title}} — {{department}}"
+    fields:
+      - { label: "Role Title", name: "title", widget: "string" }
+      - { label: "Department", name: "department", widget: "string" }
+      - { label: "Location", name: "location", widget: "string", default: "Hybrid · Hyderabad / Remote" }
+      - { label: "Employment Type", name: "type", widget: "select", options: ["Full-time", "Contract", "Fellowship", "Part-time"] }
+      - { label: "Experience Level", name: "experience", widget: "string", default: "3+ Years" }
+      - { label: "Role Overview", name: "description", widget: "text" }
+      - { label: "Core Prerequisites", name: "requirements", widget: "list" }
+      - { label: "Primary Responsibilities", name: "responsibilities", widget: "list" }
+      - { label: "Key Perks & Benefits", name: "perks", widget: "list" }
+
+  # 4. Global Settings
+  - name: "settings"
+    label: "Website Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "src/data/content/settings/general.json"
+        fields:
+          - { label: "Organization Name", name: "siteTitle", widget: "string" }
+          - { label: "Primary Slogan", name: "tagline", widget: "string" }
+          - { label: "Primary Contact Email", name: "contactEmail", widget: "string" }
+          - { label: "Inquiry Phone", name: "contactPhone", widget: "string" }
+          - { label: "Primary Office", name: "officeLocation", widget: "string" }

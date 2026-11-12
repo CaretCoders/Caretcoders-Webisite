@@ -1,0 +1,9 @@
+{
+  "id": "cloudscale-infra",
+  "name": "CloudScale Grid",
+  "logo": "",
+  "category": "Cloud Architecture",
+  "description": "Engineered multi-region failover topology and zero-downtime database replication reducing global p99 query latency from 320ms to 42ms.",
+  "websiteUrl": "https://cloudscale.net",
+  "featured": true
+}

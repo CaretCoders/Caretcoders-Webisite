@@ -1,0 +1,26 @@
+{
+  "id": "distributed-systems-architect",
+  "title": "Distributed Systems Architect",
+  "department": "Core Infrastructure & Telemetry",
+  "location": "Hybrid · Hyderabad / Remote",
+  "type": "Full-time",
+  "experience": "4+ Years",
+  "description": "Lead design and implementation of low-latency, fault-tolerant telemetry pipelines and edge verification nodes for agricultural and developer ecosystems.",
+  "requirements": [
+    "Deep proficiency in Rust, Go, or high-performance TypeScript",
+    "Experience with event streaming (Kafka/Redpanda), time-series databases, or MQTT",
+    "Understanding of distributed consensus protocols and cryptographic invariants",
+    "Proven ability to architect systems handling millions of events daily"
+  ],
+  "responsibilities": [
+    "Architect and maintain core consensus and telemetry ingestion nodes",
+    "Optimize p99 query and aggregation latencies across multi-region clusters",
+    "Collaborate with field engineers deploying hardware gateways in real-world environments"
+  ],
+  "perks": [
+    "Competitive base compensation + equity options",
+    "Remote-first autonomy with annual engineering summit",
+    "Top-tier hardware and home lab setup budget",
+    "Comprehensive health and wellness coverage"
+  ]
+}

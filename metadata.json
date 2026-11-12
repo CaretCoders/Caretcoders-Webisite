@@ -1,0 +1,6 @@
+{
+  "name": "CaretCoders",
+  "description": "Minimal, modern product website for CaretCoders featuring products, research publications, careers, tech stack, and developer documentation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

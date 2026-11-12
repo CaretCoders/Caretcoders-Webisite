@@ -1,0 +1,11 @@
+name = "caretcoders-oauth-gateway"
+main = "worker.ts"
+compatibility_date = "2024-11-01"
+
+[observability]
+enabled = true
+
+# The following secrets should be set using 'wrangler secret put <KEY>':
+# - GITHUB_CLIENT_ID
+# - GITHUB_CLIENT_SECRET
+# - ADMIN_USERNAMES (e.g. "caretcoders,admin-username")

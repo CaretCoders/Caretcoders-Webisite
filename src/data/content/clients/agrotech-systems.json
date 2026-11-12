@@ -1,0 +1,9 @@
+{
+  "id": "agrotech-systems",
+  "name": "AgriCore Technologies",
+  "logo": "",
+  "category": "IoT & Telemetry",
+  "description": "Architected low-latency sensor telemetry pipelines handling 4.2M daily agricultural metric data points with edge validation and automated fault alerts.",
+  "websiteUrl": "https://agricore.io",
+  "featured": true
+}
